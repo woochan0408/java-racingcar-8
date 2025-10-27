@@ -20,7 +20,7 @@ public class Car {
         return position;
     }
 
-    private void validateName(String name){
+    private void validateName(String name) {
         if (name == null || name.isBlank()) {
             throw new IllegalArgumentException("자동차 이름은 비어있을 수 없습니다.");
         }
@@ -29,14 +29,13 @@ public class Car {
         }
     }
 
-
-     public void move() {
+    public void move() {
         Random random = new Random();
         int randomValue = random.nextInt(10);
 
-        if(randomValue >= 4) {
-            position = position + 1;
+        if (randomValue >= 4) {
+            this.position++;
         }
-     }
+    }
 
 }

@@ -9,8 +9,9 @@ public class Application {
 
         String carNameInput = inputView.readCarNames();
         List<Car> cars = CarFactory.createCars(carNameInput);
-
         int racingCount = inputView.readRacingCount();
 
+        RacingGame game = new RacingGame(cars, racingCount, outputView);
+        game.run();
     }
 }
