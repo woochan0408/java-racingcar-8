@@ -12,6 +12,14 @@ public class Car {
         this.name = name;
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public int getPosition() {
+        return position;
+    }
+
     private void validateName(String name){
         if (name == null || name.isBlank()) {
             throw new IllegalArgumentException("자동차 이름은 비어있을 수 없습니다.");
@@ -21,9 +29,6 @@ public class Car {
         }
     }
 
-     public int getPosition() {
-        return position;
-     }
 
      public void move(int position) {
         Random random = new Random();
