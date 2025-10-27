@@ -1,9 +1,12 @@
 package racingcar;
 
-import java.util.Random;
+import camp.nextstep.edu.missionutils.Randoms;
 
 public class Car {
     private static final int MAX_NAME_LENGTH = 5;
+    private static final int MOVE_THRESHOLD = 4;
+    private static final int RANDOM_MIN = 0;
+    private static final int RANDOM_MAX = 9;
     private String name;
     private int position;
 
@@ -30,10 +33,8 @@ public class Car {
     }
 
     public void move() {
-        Random random = new Random();
-        int randomValue = random.nextInt(10);
-
-        if (randomValue >= 4) {
+        int randomValue = Randoms.pickNumberInRange(RANDOM_MIN, RANDOM_MAX);
+        if (randomValue >= MOVE_THRESHOLD) {
             this.position++;
         }
     }
