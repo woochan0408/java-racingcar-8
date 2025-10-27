@@ -30,14 +30,13 @@ public class Car {
     }
 
 
-     public void move(int position) {
+     public void move() {
         Random random = new Random();
         int randomValue = random.nextInt(10);
 
-        if(randomValue > 4) {
+        if(randomValue >= 4) {
             position = position + 1;
         }
-        this.position = position;
      }
 
 }
